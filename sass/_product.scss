@@ -1,0 +1,37 @@
+.product {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    &-item {
+        height: 45rem;
+    }
+    &-item1 {
+        background: url(../images/desktop/image-gallery-milkbottles.jpg) no-repeat center/cover;
+    }
+    &-item2 {
+        background: url(../images/desktop/image-gallery-orange.jpg) no-repeat center/cover;
+    }
+    &-item3 {
+        background: url(../images/desktop/image-gallery-cone.jpg) no-repeat center/cover;
+    }
+    &-item4 {
+        background: url(../images/desktop/image-gallery-sugarcubes.jpg) no-repeat center/cover;
+    }
+    @include maxw(37.5rem) {
+        grid-template-columns: repeat(2, 1fr);
+        &-item {
+            height: 19rem;
+        }
+        &-item1 {
+            background: url(../images/mobile/image-gallery-milkbottles.jpg) no-repeat center/cover;
+        }
+        &-item2 {
+            background: url(../images/mobile/image-gallery-orange.jpg) no-repeat center/cover;
+        }
+        &-item3 {
+            background: url(../images/mobile/image-gallery-cone.jpg) no-repeat center/cover;
+        }
+        &-item4 {
+            background: url(../images/mobile/image-gallery-sugar-cubes.jpg) no-repeat center/cover;
+        }
+    }
+}

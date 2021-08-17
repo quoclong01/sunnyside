@@ -1,0 +1,123 @@
+.header {
+    height: 80rem;
+    width: 100%;
+    background: url(../images/desktop/image-header.jpg) no-repeat center/cover;
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 5rem 4rem;
+        align-items: center;
+        &-logo {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        &-links {
+            display: flex;
+            gap: 0 5rem;
+            align-items: center;
+        }
+        &-item {
+            font-family: $secondary-font;
+        }
+        &-link {
+            color: $white;
+            transition: opacity 0.2s ease-in;
+            &:hover {
+                opacity: 0.4;
+            }
+        }
+        &-contact {
+            text-transform: uppercase;
+            color: $blue-dark-light;
+            background-color: $white;
+            padding: 1.5rem 2.5rem;
+            border-radius: 5rem;
+            font-family: $primary-font;
+            &:hover {
+                color: $white;
+                opacity: 1;
+                background-color: rgba($white, 0.2);
+            }
+        }
+        &-toggle {
+            display: none;
+        }
+    }
+    &-title {
+        margin-top: 8rem;
+        text-align: center;
+    }
+    &-heading {
+        font-size: 6rem;
+        text-transform: uppercase;
+        letter-spacing: 1rem;
+        color: $white;
+    }
+    &-down {
+        height: 11.5rem;
+        width: 4.5rem;
+        margin-top: 8rem;
+    }
+    @include maxw(37.5rem) {
+        background: url(../images/desktop/image-header.jpg) no-repeat center/cover;
+        height: 54rem;
+        .nav {
+            padding: 3rem 2rem;
+            &-links {
+                display: none;
+            }
+            &-toggle {
+                display: block;
+                cursor: pointer;
+                &-active {
+                    opacity: 0.6;
+                }
+            }
+            &-active {
+                display: block;
+                position: fixed;
+                top: 10rem;
+                left: 50%;
+                width: 90%;
+                transform: translateX(-50%);
+                text-align: center;
+                background-color: $white;
+                padding: 4rem 0;
+                li {
+                    padding: 2rem 0;
+                    a{
+                        font-size: 2rem;
+                        color: $blue-dark-grayish;
+                    }
+                    a.nav-contact {
+                        background-color: $yellow;
+                        color: $dark-desaturated;
+                    }
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: -3rem;
+                    right: 0;
+                    width: 0;
+                    height: 0;
+                    border-top: 3rem solid transparent;
+                    border-bottom: 3rem solid transparent;
+                    border-right: 3rem solid $white;
+                }
+            }
+        }
+        &-title {
+            margin-top: 4rem;
+            img {
+                margin-top: 3rem;
+            }
+        }
+        &-heading {
+            font-size: 4rem;
+            padding: 0 3rem;
+        }
+    }
+}
+

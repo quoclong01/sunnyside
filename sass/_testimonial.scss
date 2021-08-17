@@ -1,0 +1,61 @@
+.testimonial {
+    padding: 15rem 0;
+    &-heading {
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: .5rem;
+        color: $blue-grayish;
+        margin-bottom: 70px;
+    }
+    &-main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0 3rem;
+    }
+    &-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    &-image {
+        width: 7.5rem;
+        height: 7.5rem;
+        margin-bottom: 6rem;
+        img {
+            border-radius: 50%;
+        }
+    }
+    &-desc {
+        margin-bottom: 7rem;
+    }
+    &-info {
+        text-align: center;
+    }
+    &-name {
+        color: $blue-dark-light;
+        font-weight: 900;
+        margin-bottom: 1.5rem;
+    }
+    &-job {
+        color: $blue-grayish;
+        font-family: $secondary-font;
+        font-size: 1.6rem;
+    }
+    @include maxw(37.5rem){
+        padding: 6rem 0;
+        &-heading {
+            font-size: 1.6rem;
+        }
+        &-main {
+            grid-template-columns: 1fr;
+            gap: 5rem 0;
+        }
+        &-image {
+            margin-bottom: 4rem;
+        }
+        &-desc {
+            margin-bottom: 3rem;
+        }
+    }
+}

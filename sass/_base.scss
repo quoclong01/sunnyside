@@ -1,0 +1,40 @@
+body {
+    max-width: 1920px;
+    min-height: 100vh;
+    font-family: $primary-font;
+    font-size: $text-size;
+    color: $blue-grayish-light;
+    display: flex;
+    flex-direction: column;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-first {
+    color: $dark-moderate;
+}
+
+.text-second {
+    color: $blue-dark-light;
+}
+
+.text-small {
+    font-family: $secondary-font;
+    line-height: 1.5;
+}
+
+
